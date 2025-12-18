@@ -1,415 +1,412 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; /* Elimina márgenes por defecto / Remove default margins */
+  padding: 0; /* Elimina padding por defecto / Remove default padding */
+  box-sizing: border-box; /* Incluye borde y padding en el tamaño total / Include border and padding in total size */
 }
 
-/* Fondo header */
+/* Fondo header / Header background */
 .fondoheader {
-  background-color: hsl(356, 100%, 66%);
-  border-bottom-left-radius: 100px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-  padding: 40px 100px 0;
-  height: 25rem;
-  margin-bottom: 70px;
+  background-color: hsl(356, 100%, 66%); /* Color de fondo / Background color */
+  border-bottom-left-radius: 100px; /* Redondea la esquina inferior izquierda / Round bottom-left corner */
+  color: white; /* Color del texto / Text color */
+  display: flex; /* Usa flexbox para layout / Use flexbox for layout */
+  flex-direction: column; /* Apila elementos verticalmente / Stack elements vertically */
+  gap: 6rem; /* Espacio entre hijos / Space between children */
+  padding: 40px 100px 0; /* Padding superior y lateral / Top and side padding */
+  height: 25rem; /* Altura del bloque / Block height */
+  margin-bottom: 70px; /* Separación inferior / Bottom spacing */
 }
 
 .imgnav {
-  display: flex;
-  align-items: center;
-  gap: 5rem;
+  display: flex; /* Flexbox para agrupar logo y nav / Flexbox for logo + nav */
+  align-items: center; /* Centra verticalmente / Vertical align center */
+  gap: 5rem; /* Separación entre logo y menú / Space between logo and menu */
 }
 
 .headerr {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Contenedor principal del header / Main header container */
+  justify-content: space-between; /* Separa grupos a extremos / Space groups to edges */
+  align-items: center; /* Centra verticalmente / Vertical align center */
 }
 
 .headerr nav ul {
-  display: flex;
-  gap: 15px;
-  list-style: none;
+  display: flex; /* Lista horizontal / Horizontal list */
+  gap: 15px; /* Espaciado entre ítems / Space between items */
+  list-style: none; /* Quita viñetas / Remove bullets */
 }
 
 .Login {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
+  display: flex; /* Contenedor para enlaces de login / Container for login links */
+  gap: 2rem; /* Separación entre enlaces / Space between links */
+  align-items: center; /* Centra verticalmente / Vertical align center */
 }
 
 .fondoheader a {
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
+  text-decoration: none; /* Sin subrayado / No underline */
+  font-size: 20px; /* Tamaño de fuente / Font size */
+  color: white; /* Color del texto / Text color */
 }
 
 .fondoheader section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;    
+  display: flex; /* Contenedor de la sección principal / Main section container */
+  flex-direction: column; /* Apila verticalmente / Stack vertically */
+  align-items: center; /* Centra horizontalmente / Center horizontally */
+  gap: 20px; /* Espaciado interno / Internal spacing */
 }
 
 .menu {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex; /* Menú principal horizontal / Horizontal main menu */
+  gap: 30px; /* Separación entre secciones / Space between sections */
+  list-style: none; /* Sin viñetas / No bullets */
+  margin: 0; /* Sin margen / No margin */
+  padding: 0; /* Sin padding / No padding */
 }
 
 .menu-item {
-  position: relative;
+  position: relative; /* Referencia para posicionar el submenu / Reference for submenu positioning */
 }
 
 .menu-title {
-  cursor: pointer;
-  font-weight: 500;
+  cursor: pointer; /* Indica que es interactivo / Indicates interactive element */
+  font-weight: 500; /* Grosor medio / Medium weight */
 }
 
-/* SUBMENU oculto */
+/* SUBMENU oculto / Hidden submenu */
 .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #fff;
-  list-style: none;
-  padding: 10px 0;
-  margin-top: 8px;
-  min-width: 180px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  position: absolute; /* Posiciona respecto al menu-item / Position relative to menu-item */
+  top: 100%; /* Justo debajo del título / Just below title */
+  left: 0; /* Alineado a la izquierda / Left aligned */
+  background: #fff; /* Fondo blanco / White background */
+  list-style: none; /* Sin viñetas / No bullets */
+  padding: 10px 0; /* Padding vertical / Vertical padding */
+  margin-top: 8px; /* Separación del título / Gap from title */
+  min-width: 180px; /* Ancho mínimo / Minimum width */
+  border-radius: 10px; /* Bordes redondeados / Rounded corners */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* Sombra / Shadow */
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.25s ease;
+  opacity: 0; /* Inicialmente invisible / Initially invisible */
+  visibility: hidden; /* No visible / Not visible */
+  transform: translateY(-10px); /* Levantado para animación / Lifted for animation */
+  transition: all 0.25s ease; /* Transición suave / Smooth transition */
 }
 
-/* mostrar al pasar el mouse */
+/* mostrar al pasar el mouse / Show on hover */
 .menu-item:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  opacity: 1; /* Hace visible / Make visible */
+  visibility: visible; /* Cambia visibilidad / Change visibility */
+  transform: translateY(0); /* Restablece posición / Reset position */
 }
 
-/* links */
+/* links / Links */
 .submenu li a {
-  display: block;
-  padding: 10px 18px;
-  text-decoration: none;
-  color: #333;
-  font-size: 14px;
+  display: block; /* Ocupa todo el ancho / Full-width block */
+  padding: 10px 18px; /* Espaciado interno / Internal padding */
+  text-decoration: none; /* Sin subrayado / No underline */
+  color: #333; /* Color de texto / Text color */
+  font-size: 14px; /* Tamaño de fuente / Font size */
 }
 
 .submenu li a:hover {
-  background: #f4f4f4;
+  background: #f4f4f4; /* Fondo al hover / Hover background */
 }
 
-
-/* Tipografía fluida */
+/* Tipografía fluida / Fluid typography */
 h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Escala con viewport / Scale with viewport */
 }
 
 .signup {
-  background-color: white;
-  color: hsl(356, 100%, 66%) !important;
-  border-radius: 20px;
-  padding: 10px 30px;
+  background-color: white; /* Fondo blanco / White background */
+  color: hsl(356, 100%, 66%) !important; /* Color de texto / Text color */
+  border-radius: 20px; /* Bordes redondeados / Rounded corners */
+  padding: 10px 30px; /* Espaciado / Padding */
 }
 
 .button_section1 {
-  display: flex;
-  gap: 10px;
-  align-items: center;  
+  display: flex; /* Contenedor de botones / Buttons container */
+  gap: 10px; /* Separación entre botones / Space between buttons */
+  align-items: center; /* Centrado vertical / Vertical align center */
 }
 
 .button_section1 a {
-  font-size: 15px !important;
+  font-size: 15px !important; /* Tamaño de texto / Text size */
 }
 
 .button1 {
-  background-color: white;
-  color: hsl(356, 100%, 66%) !important;
-  border-radius: 20px;
-  padding: 10px 10px;
+  background-color: white; /* Fondo blanco / White background */
+  color: hsl(356, 100%, 66%) !important; /* Color de texto / Text color */
+  border-radius: 20px; /* Bordes redondeados / Rounded corners */
+  padding: 10px 10px; /* Espaciado interno / Internal padding */
 }
 
 .button2 {
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 10px 10px;
+  border: 1px solid white; /* Borde blanco / White border */
+  border-radius: 20px; /* Bordes redondeados / Rounded corners */
+  padding: 10px 10px; /* Espaciado interno / Internal padding */
 }
 
 /* Section 2 */
 .content_articles {
-  display: flex;
-  align-items: center;
+  display: flex; /* Layout de artículos + imagen / Articles + image layout */
+  align-items: center; /* Centrado vertical / Vertical align center */
 }
 
 .section2 h2 {
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  margin-bottom: 4rem;
+  display: flex; /* Contenedor del título / Title container */
+  justify-content: center; /* Centrado horizontal / Center horizontally */
+  font-size: 3rem; /* Tamaño grande / Large size */
+  margin-bottom: 4rem; /* Espacio inferior / Bottom space */
 }
 
 .section2 .articles_section2 {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  display: flex; /* Contenedor de artículos / Articles container */
+  flex-direction: column; /* Apila los artículos / Stack articles */
+  gap: 4rem; /* Separación entre artículos / Space between articles */
 }
 
 .articles_section2 h3 {
-  font-size: 2rem;
+  font-size: 2rem; /* Tamaño de subtítulo / Subtitle size */
 }
 
 .articles_section2 p {
-  font-size: 24px;
+  font-size: 24px; /* Tamaño del párrafo / Paragraph size */
 }
 
 .section2 article {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex; /* Contenedor de cada artículo / Each article container */
+  flex-direction: column; /* Apila contenido / Stack content */
+  gap: 20px; /* Espaciado interno / Internal spacing */
 }
 
 .section2 {
-  margin: 0 60px 15rem;
+  margin: 0 60px 15rem; /* Márgenes laterales y inferior / Side and bottom margins */
 }
 
 .section2 img {
-  height: 30rem;
-  width: 35rem;
+  height: 30rem; /* Altura fija / Fixed height */
+  width: 35rem; /* Ancho fijo / Fixed width */
 }
 
 /* Section 3 */
 .section3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  height: 25rem;
-  margin: 0 0 70px;
-  background-color: hsl(237, 23%, 31%);
-  border-radius: 0 100px 0 100px;
+  display: flex; /* Contenedor de sección / Section container */
+  align-items: center; /* Centrado vertical / Vertical align center */
+  justify-content: space-around; /* Distribuye elementos / Distribute elements */
+  height: 25rem; /* Altura / Height */
+  margin: 0 0 70px; /* Margen inferior / Bottom margin */
+  background-color: hsl(237, 23%, 31%); /* Fondo oscuro / Dark background */
+  border-radius: 0 100px 0 100px; /* Esquinas alternas redondeadas / Alternating rounded corners */
 }
 
 .section3 article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  color: white;
+  display: flex; /* Contenedor del contenido / Content container */
+  flex-direction: column; /* Apila verticalmente / Stack vertically */
+  align-items: center; /* Centrado / Center */
+  gap: 20px; /* Espaciado / Spacing */
+  color: white; /* Texto blanco / White text */
 }
 
 .section3 h2 {
-  font-size: 3rem;
+  font-size: 3rem; /* Tamaño del título / Title size */
 }
 
 .section3 p {
-  font-size: 22px;
+  font-size: 22px; /* Tamaño del párrafo / Paragraph size */
 }
 
 /* Section 4 */
 .section4 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  margin-bottom: 70px;
+  display: grid; /* Usa CSS Grid / Use CSS Grid */
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas / Two columns */
+  align-items: center; /* Centrado vertical / Vertical align center */
+  margin-bottom: 70px; /* Separación inferior / Bottom spacing */
 }
 
 .section4 img{
-    position: relative;
-    left: -28%;
+    position: relative; /* Permite ajustar con left / Allows left offset */
+    left: -28%; /* Desplaza imagen hacia la izquierda / Shift image to the left */
 }
 
 .articles_section4{
-    transform: translateX(-68%);
+    transform: translateX(-68%); /* Desplaza el bloque de texto / Shift text block */
 }
 
 .articles_section4 {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 3rem;
-  justify-self: start;
+  display: grid; /* Contenedor de artículos / Articles container */
+  grid-template-rows: repeat(2, 1fr); /* Dos filas / Two rows */
+  gap: 3rem; /* Espaciado entre artículos / Space between articles */
+  justify-self: start; /* Alinea al inicio / Align to start */
 }
 
 .articles_section4 article {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex; /* Contenedor de artículo / Article container */
+  flex-direction: column; /* Apila verticalmente / Stack vertically */
+  gap: 20px; /* Espaciado / Spacing */
 }
 
 .articles_section4 h2 {
-  font-size: 2rem;
+  font-size: 2rem; /* Tamaño de subtítulo / Subtitle size */
 }
 
 .section4 p {
-  font-size: 22px;
+  font-size: 22px; /* Tamaño del párrafo / Paragraph size */
 }
 
 /* Footer */
 footer {
-  background-color: hsl(240, 10%, 16%);
-  color: white;
-  padding: 40px 40px 40px 70px;
-  border-top-right-radius: 100px;
+  background-color: hsl(240, 10%, 16%); /* Fondo del footer / Footer background */
+  color: white; /* Texto blanco / White text */
+  padding: 40px 40px 40px 70px; /* Espaciado interno / Internal padding */
+  border-top-right-radius: 100px; /* Redondea esquina superior derecha / Round top-right corner */
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 2rem;
+  display: grid; /* Grid para el contenido / Grid for content */
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas / Four columns */
+  column-gap: 2rem; /* Separación entre columnas / Column gap */
 }
 
 .footer-container > * {
-  text-align: left; /* cada bloque alineado hacia la izquierda */
+  text-align: left; /* cada bloque alineado hacia la izquierda / each block left-aligned */
 }
 
 footer a {
-  text-decoration: none;
-  color: hsl(0, 0%, 74%);
+  text-decoration: none; /* Sin subrayado / No underline */
+  color: hsl(0, 0%, 74%); /* Color de enlaces / Link color */
 }
 
 .footer1 ul {
-  list-style: none;
+  list-style: none; /* Quita viñetas / Remove bullets */
 }
 
 .footer1 li {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; /* Espacio entre ítems / Space between items */
 }
 
 .footer1{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    display: flex; /* Contenedor de columna / Column container */
+    flex-direction: column; /* Apila verticalmente / Stack vertically */
+    gap: 2rem; /* Espaciado interno / Internal spacing */
 }
 
-/* Interacciones */
+/* Interacciones / Interactions */
 a {
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Transición de color / Color transition */
 }
 
 a:hover,
 a:focus {
-  color: white;
+  color: white; /* Color al hover/focus / Hover/focus color */
 }
 
 .button1,
 .signup {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición de movimiento y sombra / Transform and shadow transition */
 }
 
 .button1:hover,
 .button1:focus,
 .signup:hover,
 .signup:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-3px); /* Efecto de elevación / Lift effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Sombra al interactuar / Shadow on interact */
 }
 
-/* Microinteracción extra en imágenes */
+/* Microinteracción extra en imágenes / Extra microinteraction on images */
 img:hover {
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
+  transform: scale(1.02); /* Leve zoom al hover / Slight zoom on hover */
+  transition: transform 0.3s ease; /* Transición suave / Smooth transition */
 }
 
-
-
-/* Accesibilidad teclado */
+/* Accesibilidad teclado / Keyboard accessibility */
 a:focus-visible,
 button:focus-visible,
 summary:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 4px;
+  outline: 2px solid white; /* Contorno visible / Visible outline */
+  outline-offset: 4px; /* Separación del contorno / Outline offset */
 }
 
-/* Responsive mobile */
+/* Responsive mobile / Mobile responsive */
 @media (max-width: 480px) {
   .fondoheader {
-    padding: 30px 20px;
-    height: auto;
-    gap: 3rem;
-    text-align: center;
+    padding: 30px 20px; /* Reduce padding / Reduce padding */
+    height: auto; /* Altura automática / Auto height */
+    gap: 3rem; /* Menos espacio / Less space */
+    text-align: center; /* Centra texto / Center text */
   }
 
   .headerr {
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: column; /* Apila elementos / Stack elements */
+    gap: 2rem; /* Espacio entre grupos / Space between groups */
   }
 
   .imgnav {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column; /* Logo y nav en columna / Logo and nav stacked */
+    gap: 1rem; /* Menos espacio / Less space */
   }
 
   .content_articles {
-    flex-direction: column;
-    gap: 3rem;
+    flex-direction: column; /* Artículos arriba, imagen abajo / Articles then image */
+    gap: 3rem; /* Espaciado / Spacing */
   }
 
   .section2 img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ocupa todo el ancho / Full width */
+    height: auto; /* Mantiene proporción / Keep aspect ratio */
   }
 
   .section3 {
-    flex-direction: column;
-    height: auto;
-    padding: 3rem 1rem;
-    text-align: center;
+    flex-direction: column; /* Apila contenido / Stack content */
+    height: auto; /* Altura automática / Auto height */
+    padding: 3rem 1rem; /* Padding interno / Internal padding */
+    text-align: center; /* Centra texto / Center text */
   }
 
   .section4 {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    grid-template-columns: 1fr; /* Una sola columna / Single column */
+    gap: 3rem; /* Espaciado / Spacing */
   }
 
   .section4 img {
-    width: 100%;
+    width: 100%; /* Imagen responsiva / Responsive image */
   }
 
   .footer-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    grid-template-columns: 1fr; /* Footer en una columna / One-column footer */
+    gap: 3rem; /* Espaciado / Spacing */
+    text-align: center; /* Centra contenido / Center content */
   }
 }
 
-/* Responsive tablet */
+/* Responsive tablet / Tablet responsive */
 @media (max-width: 1023px) and (min-width: 768px) {
   .fondoheader {
-    padding: 40px 50px;
+    padding: 40px 50px; /* Ajusta padding / Adjust padding */
   }
 
   .content_articles {
-    flex-direction: column;
-    gap: 4rem;
+    flex-direction: column; /* Apila artículos e imagen / Stack articles and image */
+    gap: 4rem; /* Espaciado mayor / Larger spacing */
   }
 
   .section4 {
-    grid-template-columns: 1fr;
-    gap: 4rem;
+    grid-template-columns: 1fr; /* Una columna / Single column */
+    gap: 4rem; /* Espaciado / Spacing */
   }
 
   .section4 img {
-    justify-self: center;
+    justify-self: center; /* Centra imagen / Center image */
   }
 
   .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas / Two columns */
+    gap: 3rem; /* Espaciado / Spacing */
   }
 }
 
-/* Desktop */
+/* Desktop / Escritorio */
 @media (min-width: 1024px) {
   .section4 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Vuelve a dos columnas / Back to two columns */
   }
 }
